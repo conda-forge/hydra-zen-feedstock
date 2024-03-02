@@ -149,6 +149,3 @@ Feedstock Maintainers
 
 * [@cameronraysmith](https://github.com/cameronraysmith/)
 
-
-<!-- dummy commit to enable rerendering -->
-
