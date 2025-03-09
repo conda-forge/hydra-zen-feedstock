@@ -1,13 +1,13 @@
 {% set name = "hydra-zen" %}
-{% set version = "0.13.0" %}
+{% set version = "0.14.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 1b53d74aa1f0baa04fafdac6aba7a94ae40929e7b0a5a5081d8740f74322052d
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 154b1d27dc0f02d5609789bad6a53c3871d5fc9720fd8b39c3f11152a07c325e
 
 build:
   noarch: python
@@ -22,9 +22,10 @@ requirements:
     - setuptools-scm ==7.0.5
     - pip
   run:
+    - typing_extensions >=4.1.0,!=4.6.0
     - python >=3.8
     - hydra-core >=1.2.0
-    - omegaconf >=2.2.1
+    - omegaconf >=2.2.3
     - typing-extensions >=4.1.0,!=4.6.0
 
 test:
