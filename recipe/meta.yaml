@@ -1,5 +1,5 @@
 {% set name = "hydra-zen" %}
-{% set version = "0.14.0" %}
+{% set version = "0.15.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 154b1d27dc0f02d5609789bad6a53c3871d5fc9720fd8b39c3f11152a07c325e
+  sha256: 4f8c0f37d61183bcd79f2c1de55dfd64cd215c17f2661c84eeeb8009215ccebb
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -22,6 +22,7 @@ requirements:
     - setuptools-scm ==7.0.5
     - pip
   run:
+    - typing_extensions >=4.1.0,!=4.6.0
     - python >={{ python_min }}
     - hydra-core >=1.2.0
     - omegaconf >=2.2.3
