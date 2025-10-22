@@ -1,5 +1,5 @@
 {% set name = "hydra-zen" %}
-{% set version = "0.15.0" %}
+{% set version = "0.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 4f8c0f37d61183bcd79f2c1de55dfd64cd215c17f2661c84eeeb8009215ccebb
+  sha256: 55b931ba79bef329c9baa64e47c44b2dcc1594b0df292a445bed5d9a349596b0
 
 build:
   noarch: python
